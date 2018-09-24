@@ -17,3 +17,11 @@
     color: white !important;
     font-weight: bold;
 }
+
+.team-member-info a{
+    display: block;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
