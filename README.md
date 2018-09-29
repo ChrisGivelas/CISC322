@@ -1,1 +1,2 @@
-# cisc322
+# CISC322
+Software Architecture Project
