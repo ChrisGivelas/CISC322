@@ -25,3 +25,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.wrapper{
+    padding: 40px !important;
+}
