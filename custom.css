@@ -10,7 +10,7 @@
     padding-top: 10em !important;
     padding-bottom: 10em !important;
     height: 100%;
-    background: rgba(0,0,0,0.30);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 #banner div h1 {
@@ -18,9 +18,13 @@
     font-weight: bold;
 }
 
-.team-member-info a{
-    display: block;
+.team-member-info a {
     color: white;
+}
+
+.team-member-info a,
+.link-list li a {
+    display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -30,6 +34,10 @@
     padding-top: 32px;
 }
 
-.wrapper{
+.wrapper {
     padding: 40px !important;
+}
+
+.link-list {
+    list-style-type: none;
 }
