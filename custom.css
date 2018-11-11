@@ -42,16 +42,16 @@
     list-style-type: none;
 }
 
-#assignments * {
+.assignments * {
     text-align: center !important;
 }
 
-#assignments article .image {
+.assignments article .image {
     width: 50%;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
-#assignments article .image a img {
+.assignments article .image a img {
     width: 100%;
     border: 1px solid black;
     border-radius: 2px;
