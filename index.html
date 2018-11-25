@@ -297,6 +297,13 @@
         </div>
     </section>
 
+    <section class="wrapper style1 special">
+        <div class="inner">
+            <h3 style="color: white; font-size: 48px; font-weight: bold; text-align: center;">Changelog</h3>
+            <div id="commit_history"></div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="footer">
         <div class="inner">
@@ -316,6 +323,32 @@
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        var next_page_index = 2;
+        var pages = [];
+
+        const fetchCommitPage = function (page_index) {
+            return fetch("https://api.github.com/repos/chrisgivelas/cisc322/commits?page=" + page_index).then(function (res) {
+                return res.json();
+            }).then(function (json) {
+                pages.push(json);
+            })
+        }
+
+        fetchCommitPage(1).then(function () {
+            return fetchCommitPage(2)
+        }).then(function () {
+            pages.forEach(function (page) {
+                page.forEach(function (node) {
+                    var newCommitNode = document.createElement('p');
+                    var date = new Date(node.commit.author.date);
+                    newCommitNode.innerHTML = node.commit.message + " - " + date.toUTCString();
+                    var history = document.getElementById("commit_history");
+                    history.appendChild(newCommitNode);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -66,3 +66,13 @@
         width: 30% !important;
     }
 }
+
+#commit_history{
+    text-align: center;
+}
+
+#commit_history p {
+    margin: 0px;
+    color: white;
+    font-weight: bold;
+}
